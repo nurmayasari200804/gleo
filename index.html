@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLEOLAYS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Overlay Login -->
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-container">
+            <div class="login-header">
+                <i class="fas fa-lock"></i>
+                <h2>Login untuk Mengakses Makalah</h2>
+                <p>Masukkan username dan password untuk melanjutkan</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i> Username
+                    </label>
+                    <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-key"></i> Password
+                    </label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                    <div class="password-toggle">
+                        <i class="fas fa-eye" id="togglePassword"></i>
+                    </div>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="checkmark"></span>
+                        Ingat saya
+                    </label>
+                    <a href="#" id="forgotPassword">Lupa password?</a>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Header dan Navigasi -->
+    <header id="mainHeader" style="display: none;">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Konsep Sistem Informasi</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="page1">Data Diri</a></li>
+                    <li><a href="#" class="nav-link" data-page="page2">BAB I</a></li>
+                    <li><a href="#" class="nav-link" data-page="page3">BAB II</a></li>
+                    <li><a href="#" class="nav-link" data-page="page4">BAB III</a></li>
+                    <li><a href="#" id="logoutBtn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Container Utama -->
+    <div class="container" id="mainContainer" style="display: none;">
+        <!-- Halaman 1: Data Diri -->
+        <section id="page1" class="page active">
+            <h1 class="page-title">Data Diri Penulis</h1>
+    <div class="photo-section">
+    <img src="mayaa.jpg" alt="Foto Profil" class="profile-photo">
+</div>
+                <div class="profile-info">
+                    <h2>Informasi Pribadi</h2>
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <strong>Nama Lengkap:</strong> Nurmayasari Usman
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-id-badge"></i>
+                        <div>
+                            <strong>NIM:</strong> 2024510007
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <strong>Instansi:</strong> Universitas Al Asyariah Mandar
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <strong>Program Studi:</strong> Sistem Informasi
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <strong>Tahun Akademik:</strong> 2026
+                        </div>
+                    </div>
+                    
+                    <h2>Kontak dan Media Sosial</h2>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                         <div>
+                        <strong>Email:</strong>
+                         <a href="mailto:nurmayasariusman@gmail.com">nurmayasariusman@gmail.com</a>
+                         </div>
+                         </div>
+                     <div class="info-item">
+                         <i class="fas fa-phone"></i>
+                         <div>
+                       <strong>Telepon/WA:</strong>
+                        <a href="tel:+6287863013846">0878-6301-3846</a>
+                         </div>
+                        </div>
+                    <div class="info-item horizontal">
+                          <i class="fab fa-instagram"></i>
+                         <div class="info-content">
+                          <span class="info-label">Instagram:</span>
+                          <span class="info-value">
+                           <a href="https://instagram.com/nmayaaaa" target="_blank">@nmayaaaa</a>
+                          </span>
+                         </div>
+                        </div>
+
+                    <div class="info-item horizontal">
+                          <i class="fab fa-tiktok"></i>
+                         <div class="info-content">
+                        <span class="info-label">Tiktok:</span>
+                        <span class="info-value">
+                        <a href="https://tiktok.com/@gleolays" target="_blank">@gleolays</a>
+                         </span>
+                         </div>
+            
+            <div class="page-numbers">
+                <button class="page-btn" id="prevBtn1" disabled>Sebelumnya</button>
+                <span>Halaman 1 dari 4</span>
+                <button class="page-btn" id="nextBtn1">Selanjutnya</button>
+            </div>
+        </section>
+
+        <!-- Halaman 2: Konsep Sistem Informasi -->
+        <section id="page2" class="page">
+    <h1 class="page-title center-title">BAB I<br>PENDAHULUAN</h1>
+            
+            <div class="content-section">
+                <h3>1.1 Latar Belakang</h3>
+                <p>Perkembangan teknologi yang pesat di era digital telah mengubah cara organisasi maupun individu dalam mengelola data dan informasi. Informasi telah menjadi aset strategis yang kritis bagi pengambilan keputusan, peningkatan efisiensi operasional, dan penciptaan nilai kompetitif. Dalam konteks ini, sistem informasi muncul sebagai suatu disiplin ilmu dan kerangka kerja yang esensial untuk merancang, mengimplementasikan, mengelola, dan mengevaluasi bagaimana data diolah menjadi informasi yang berguna. </p>
+                <p>Sistem informasi bukan sekadar tentang perangkat keras dan perangkat lunak komputer, tetapi merupakan suatu kesatuan yang kompleks antara komponen teknologi, manusia, dan proses bisnis. Pemahaman terhadap konsep dasar sistem informasi menjadi fondasi bagi mahasiswa, profesional, dan masyarakat umum untuk dapat beradaptasi dan berkontribusi dalam lingkungan yang semakin tergantung pada teknologi informasi. Oleh karena itu, makalah ini disusun untuk membahas konsep sistem informasi secara komprehensif, menyoroti komponen, jenis, peran, serta tantangan yang dihadapi dalam penerapannya.</p>
+              </div>
+
+              <div class="content-section">
+                <h3>1.2 Rumusan Masalah</h3>
+                <ol>
+                    <li>Apa pengertian Sistem Informasi?</li>
+                    <li>Apa saja komponen-komponen utama yang ada pada Sistem Informasi?</li>
+                    <li>Apa saja jenis-jenis Sistem Informasi?</li>
+                    <li>Apa saja contoh penerapan Sistem Informasi di Instansi?</li>
+                </ol>
+                </div>
+
+                <div class="content-section">
+                <h3>1.3 Tujuan</h3>
+                <ol>
+                    <li>Untuk mengetahui pengertian Sistem Informasi</li>
+                    <li>Untuk mengetahui komponen-komponen utama yang ada pada Sistem Informasi</li>
+                    <li>Untuk mengetahui jenis-jenis Sistem Informasi</li>
+                    <li>Untuk mengetahui contoh penerapan Sistem Informasi di Instansi</li>
+                </ol>
+
+              </div>
+                
+            <div class="page-numbers">
+                <button class="page-btn" id="prevBtn2">Sebelumnya</button>
+                <span>Halaman 2 dari 4</span>
+                <button class="page-btn" id="nextBtn2">Selanjutnya</button>
+            </div>
+        </section>
+
+        <!-- Halaman 3: Komponen dan Jenis Sistem Informasi -->
+        <section id="page3" class="page">
+            <h1 class="page-title center-title">BAB II<br>PEMBAHASAN</h1>
+
+             <div class="content-section">
+                <h3>2.1 Pengertian Sistem Informasi</h3>
+                <p>Sistem informasi (SI) adalah kombinasi dari teknologi informasi dan aktivitas orang yang menggunakan teknologi tersebut untuk mendukung operasi dan manajemen. Dalam arti yang sangat luas, sistem informasi merujuk pada interaksi antara orang, proses data, dan teknologi.</p>
+                <p>Menurut O'Brien (2005), sistem informasi adalah suatu kombinasi teratur dari orang-orang, hardware, software, jaringan komunikasi, dan sumber daya data yang mengumpulkan, mengubah, dan menyebarkan informasi dalam suatu organisasi.</p>
+            </div>
+            <div class="content-section">
+                <h3>2.2 Komponen Sistem Informasi</h3>
+                <p>Sistem informasi terdiri dari beberapa komponen yang saling berinteraksi:</p>
+                <ul>
+                    <li><strong>Hardware:</strong> Perangkat fisik seperti komputer, server, dan perangkat jaringan</li>
+                    <li><strong>Software:</strong> Program yang menjalankan fungsi pemrosesan data</li>
+                    <li><strong>Data:</strong> Fakta mentah yang diolah menjadi informasi</li>
+                    <li><strong>Prosedur:</strong> Aturan dan kebijakan yang mengatur operasi sistem</li>
+                    <li><strong>Orang:</strong> Pengguna, operator, dan administrator sistem</li>
+                    <li><strong>Jaringan:</strong> Infrastruktur komunikasi yang menghubungkan komponen sistem</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h3>2.3 Jenis-Jenis Sistem Informasi</h3>
+                <p>Berdasarkan level organisasi dan fungsi, sistem informasi dapat diklasifikasikan sebagai:</p>
+                
+                <h4>1. Sistem Informasi Tingkat Operasional</h4>
+                <p>Contoh: Transaction Processing Systems (TPS) untuk menangani transaksi harian seperti penjualan, pembelian, dan penggajian.</p>
+                
+                <h4>2. Sistem Informasi Tingkat Manajerial</h4>
+                <p>Contoh: Management Information Systems (MIS) yang menghasilkan laporan periodik untuk pengambilan keputusan manajemen.</p>
+                
+                <h4>3. Sistem Informasi Tingkat Strategis</h4>
+                <p>Contoh: Executive Support Systems (ESS) yang membantu manajemen puncak dalam perencanaan strategis jangka panjang.</p>
+                
+                <h4>4. Sistem Informasi Fungsional</h4>
+                <p>Contoh: Sistem informasi akuntansi, pemasaran, sumber daya manusia, dan produksi.</p>
+            </div>
+            
+            <div class="content-section">
+                <h3>2.4 Contoh Penerapan di Instansi</h3>
+                <p>Berikut adalah contoh penerapan sistem informasi di beberapa instansi:</p>
+                
+                <div class="info-item">
+                    <i class="fas fa-hospital"></i>
+                    <div>
+                        <strong>Rumah Sakit:</strong> Sistem Informasi Manajemen Rumah Sakit (SIMRS) untuk pengelolaan rekam medis, jadwal dokter, dan inventaris obat.
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-university"></i>
+                    <div>
+                        <strong>Perguruan Tinggi:</strong> Sistem Informasi Akademik (SIAKAD) untuk pengelolaan data mahasiswa, nilai, dan kurikulum.
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-landmark"></i>
+                    <div>
+                        <strong>Pemerintahan:</strong> Sistem Informasi Pelayanan Publik (SIPP) untuk meningkatkan kualitas layanan masyarakat.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page-numbers">
+                <button class="page-btn" id="prevBtn3">Sebelumnya</button>
+                <span>Halaman 3 dari 4</span>
+                <button class="page-btn" id="nextBtn3">Selanjutnya</button>
+            </div>
+        </section>
+
+        <!-- Halaman 4: Kesimpulan -->
+        <section id="page4" class="page">
+  <h1 class="page-title center-title">BAB III<br>PENUTUP</h1>
+            
+            <div class="content-section">
+                <h3>3.1 Kesimpulan</h3>
+                <p>Berdasarkan pembahasan mengenai konsep sistem informasi, dapat disimpulkan bahwa:</p>
+                <ul>
+                    <li>Sistem informasi merupakan komponen vital dalam organisasi modern yang berfungsi untuk mengumpulkan, memproses, menyimpan, dan mendistribusikan informasi.</li>
+                    <li>Implementasi sistem informasi yang efektif dapat meningkatkan efisiensi operasional, mendukung pengambilan keputusan, dan menciptakan keunggulan kompetitif.</li>
+                    <li>Sistem informasi terdiri dari komponen hardware, software, data, prosedur, orang, dan jaringan yang saling berinteraksi.</li>
+                    <li>Jenis sistem informasi bervariasi sesuai dengan level organisasi dan fungsi, mulai dari sistem operasional hingga sistem strategis.</li>
+                    <li>Penerapan sistem informasi di berbagai instansi seperti rumah sakit, perguruan tinggi, dan pemerintahan telah terbukti meningkatkan kualitas layanan dan efektivitas organisasi.</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h3>3.2 Saran</h3>
+                <p>Untuk pengembangan lebih lanjut, penulis memberikan rekomendasi sebagai berikut:</p>
+                <ul>
+                    <li>Organisasi perlu melakukan audit sistem informasi secara berkala untuk memastikan keselarasan dengan tujuan bisnis.</li>
+                    <li>Investasi dalam pelatihan sumber daya manusia penting untuk memaksimalkan pemanfaatan sistem informasi.</li>
+                    <li>Perlu pertimbangan matang dalam memilih teknologi yang sesuai dengan kebutuhan dan kemampuan organisasi.</li>
+                    <li>Keamanan dan privasi data harus menjadi prioritas dalam pengembangan sistem informasi.</li>
+                    <li>Pengembangan sistem informasi harus mengikuti standar dan regulasi yang berlaku di industri terkait.</li>
+                </ul>
+            </div>
+            
+            
+            <div class="page-numbers">
+                <button class="page-btn" id="prevBtn4">Sebelumnya</button>
+                <span>Halaman 4 dari 4</span>
+                <button class="page-btn" id="nextBtn4" disabled>Selanjutnya</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="mainFooter" style="display: none;">
+        <p>&copy; 2026 Konsep Sistem Informasi. Hak Cipta Dilindungi.</p>
+        <p>Dibuat dengan <i class="fas fa-heart" style="color: #e74c3c;"></i> oleh Nurmayasari Usman</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
