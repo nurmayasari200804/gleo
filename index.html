@@ -17,37 +17,32 @@
                 <p>Masukkan username dan password untuk melanjutkan</p>
             </div>
             
-             <form id="loginForm" class="login-form">
-             <div class="form-group">
-                  <label for="username">
-                 <i class="fas fa-user"></i> Username
-                  </label>
-                  <input type="text" id="username" name="username" placeholder="Masukkan username" required>
-                 <div class="error-message" id="usernameError"></div>
-                  </div>
-    
-    <div class="form-group">
-        <label for="password">
-            <i class="fas fa-key"></i> Password
-        </label>
-        <input type="password" id="password" name="password" placeholder="Masukkan password" required>
-        <div class="password-toggle">
-            <i class="fas fa-eye" id="togglePassword"></i>
-        </div>
-        <div class="error-message" id="passwordError"></div>
-    </div>
-    
-    <!-- Tambahkan div untuk error umum -->
-    <div class="alert alert-danger" id="loginError" style="display: none;">
-        <i class="fas fa-exclamation-triangle"></i>
-        <span id="errorMessage"></span>
-    </div>
-    
-    <button type="submit" class="login-btn">
-        <i class="fas fa-sign-in-alt"></i> Login
-    </button>
-</form>
+            <!-- FORM LOGIN YANG DIPERBAIKI -->
+            <form id="loginForm" class="login-form">
+                <!-- Username -->
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i> Username
+                    </label>
+                    <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+                    <div class="error-message" id="usernameError"></div>
+                </div>
                 
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-key"></i> Password
+                    </label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                        <button type="button" id="togglePassword" class="eye-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                
+                <!-- Opsi Remember Me & Lupa Password -->
                 <div class="form-options">
                     <label class="checkbox-container">
                         <input type="checkbox" id="rememberMe">
@@ -57,11 +52,16 @@
                     <a href="#" id="forgotPassword">Lupa password?</a>
                 </div>
                 
+                <!-- Error Message -->
+                <div class="alert alert-danger" id="loginError" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span id="errorMessage"></span>
+                </div>
+                
+                <!-- Tombol Login (HANYA SATU) -->
                 <button type="submit" class="login-btn">
                     <i class="fas fa-sign-in-alt"></i> Login
                 </button>
-                
-                </div>
             </form>
         </div>
     </div>
@@ -92,75 +92,76 @@
         <!-- Halaman 1: Data Diri -->
         <section id="page1" class="page active">
             <h1 class="page-title">Data Diri Penulis</h1>
-    <div class="photo-section">
-    <img src="mayaa.jpg" alt="Foto Profil" class="profile-photo">
-</div>
-                <div class="profile-info">
-                    <h2>Informasi Pribadi</h2>
-                    <div class="info-item">
-                        <i class="fas fa-user"></i>
-                        <div>
-                            <strong>Nama Lengkap:</strong> Nurmayasari Usman
-                        </div>
+            <div class="photo-section">
+                <img src="mayaa.jpg" alt="Foto Profil" class="profile-photo">
+            </div>
+            <div class="profile-info">
+                <h2>Informasi Pribadi</h2>
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <strong>Nama Lengkap:</strong> Nurmayasari Usman
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-id-badge"></i>
-                        <div>
-                            <strong>NIM:</strong> 2024510007
-                        </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-id-badge"></i>
+                    <div>
+                        <strong>NIM:</strong> 2024510007
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-university"></i>
-                        <div>
-                            <strong>Instansi:</strong> Universitas Al Asyariah Mandar
-                        </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-university"></i>
+                    <div>
+                        <strong>Instansi:</strong> Universitas Al Asyariah Mandar
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <div>
-                            <strong>Program Studi:</strong> Sistem Informasi
-                        </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>
+                        <strong>Program Studi:</strong> Sistem Informasi
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <div>
-                            <strong>Tahun Akademik:</strong> 2026
-                        </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <strong>Tahun Akademik:</strong> 2026
                     </div>
-                    
-                    <h2>Kontak dan Media Sosial</h2>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                         <div>
+                </div>
+                
+                <h2>Kontak dan Media Sosial</h2>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
                         <strong>Email:</strong>
-                         <a href="mailto:nurmayasariusman@gmail.com">nurmayasariusman@gmail.com</a>
-                         </div>
-                         </div>
-                     <div class="info-item">
-                         <i class="fas fa-phone"></i>
-                         <div>
-                       <strong>Telepon/WA:</strong>
+                        <a href="mailto:nurmayasariusman@gmail.com">nurmayasariusman@gmail.com</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Telepon/WA:</strong>
                         <a href="tel:+6287863013846">0878-6301-3846</a>
-                         </div>
-                        </div>
-                    <div class="info-item horizontal">
-                          <i class="fab fa-instagram"></i>
-                         <div class="info-content">
-                          <span class="info-label">Instagram:</span>
-                          <span class="info-value">
-                           <a href="https://instagram.com/nmayaaaa" target="_blank">@nmayaaaa</a>
-                          </span>
-                         </div>
-                        </div>
-
-                    <div class="info-item horizontal">
-                          <i class="fab fa-tiktok"></i>
-                         <div class="info-content">
+                    </div>
+                </div>
+                <div class="info-item horizontal">
+                    <i class="fab fa-instagram"></i>
+                    <div class="info-content">
+                        <span class="info-label">Instagram:</span>
+                        <span class="info-value">
+                            <a href="https://instagram.com/nmayaaaa" target="_blank">@nmayaaaa</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="info-item horizontal">
+                    <i class="fab fa-tiktok"></i>
+                    <div class="info-content">
                         <span class="info-label">Tiktok:</span>
                         <span class="info-value">
-                        <a href="https://tiktok.com/@gleolays" target="_blank">@gleolays</a>
-                         </span>
-                         </div>
+                            <a href="https://tiktok.com/@gleolays" target="_blank">@gleolays</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
             
             <div class="page-numbers">
                 <button class="page-btn" id="prevBtn1" disabled>Sebelumnya</button>
@@ -171,15 +172,15 @@
 
         <!-- Halaman 2: Konsep Sistem Informasi -->
         <section id="page2" class="page">
-    <h1 class="page-title center-title">BAB I<br>PENDAHULUAN</h1>
+            <h1 class="page-title center-title">BAB I<br>PENDAHULUAN</h1>
             
             <div class="content-section">
                 <h3>1.1 Latar Belakang</h3>
-                <p>Perkembangan teknologi yang pesat di era digital telah mengubah cara organisasi maupun individu dalam mengelola data dan informasi. Informasi telah menjadi aset strategis yang kritis bagi pengambilan keputusan, peningkatan efisiensi operasional, dan penciptaan nilai kompetitif. Dalam konteks ini, sistem informasi muncul sebagai suatu disiplin ilmu dan kerangka kerja yang esensial untuk merancang, mengimplementasikan, mengelola, dan mengevaluasi bagaimana data diolah menjadi informasi yang berguna. </p>
+                <p>Perkembangan teknologi yang pesat di era digital telah mengubah cara organisasi maupun individu dalam mengelola data dan informasi. Informasi telah menjadi aset strategis yang kritis bagi pengambilan keputusan, peningkatan efisiensi operasional, dan penciptaan nilai kompetitif. Dalam konteks ini, sistem informasi muncul sebagai suatu disiplin ilmu dan kerangka kerja yang esensial untuk merancang, mengimplementasikan, mengelola, dan mengevaluasi bagaimana data diolah menjadi informasi yang berguna.</p>
                 <p>Sistem informasi bukan sekadar tentang perangkat keras dan perangkat lunak komputer, tetapi merupakan suatu kesatuan yang kompleks antara komponen teknologi, manusia, dan proses bisnis. Pemahaman terhadap konsep dasar sistem informasi menjadi fondasi bagi mahasiswa, profesional, dan masyarakat umum untuk dapat beradaptasi dan berkontribusi dalam lingkungan yang semakin tergantung pada teknologi informasi. Oleh karena itu, makalah ini disusun untuk membahas konsep sistem informasi secara komprehensif, menyoroti komponen, jenis, peran, serta tantangan yang dihadapi dalam penerapannya.</p>
-              </div>
+            </div>
 
-              <div class="content-section">
+            <div class="content-section">
                 <h3>1.2 Rumusan Masalah</h3>
                 <ol>
                     <li>Apa pengertian Sistem Informasi?</li>
@@ -187,9 +188,9 @@
                     <li>Apa saja jenis-jenis Sistem Informasi?</li>
                     <li>Apa saja contoh penerapan Sistem Informasi di Instansi?</li>
                 </ol>
-                </div>
+            </div>
 
-                <div class="content-section">
+            <div class="content-section">
                 <h3>1.3 Tujuan</h3>
                 <ol>
                     <li>Untuk mengetahui pengertian Sistem Informasi</li>
@@ -197,8 +198,7 @@
                     <li>Untuk mengetahui jenis-jenis Sistem Informasi</li>
                     <li>Untuk mengetahui contoh penerapan Sistem Informasi di Instansi</li>
                 </ol>
-
-              </div>
+            </div>
                 
             <div class="page-numbers">
                 <button class="page-btn" id="prevBtn2">Sebelumnya</button>
@@ -211,11 +211,12 @@
         <section id="page3" class="page">
             <h1 class="page-title center-title">BAB II<br>PEMBAHASAN</h1>
 
-             <div class="content-section">
+            <div class="content-section">
                 <h3>2.1 Pengertian Sistem Informasi</h3>
                 <p>Sistem informasi (SI) adalah kombinasi dari teknologi informasi dan aktivitas orang yang menggunakan teknologi tersebut untuk mendukung operasi dan manajemen. Dalam arti yang sangat luas, sistem informasi merujuk pada interaksi antara orang, proses data, dan teknologi.</p>
                 <p>Menurut O'Brien (2005), sistem informasi adalah suatu kombinasi teratur dari orang-orang, hardware, software, jaringan komunikasi, dan sumber daya data yang mengumpulkan, mengubah, dan menyebarkan informasi dalam suatu organisasi.</p>
             </div>
+            
             <div class="content-section">
                 <h3>2.2 Komponen Sistem Informasi</h3>
                 <p>Sistem informasi terdiri dari beberapa komponen yang saling berinteraksi:</p>
@@ -281,7 +282,7 @@
 
         <!-- Halaman 4: Kesimpulan -->
         <section id="page4" class="page">
-  <h1 class="page-title center-title">BAB III<br>PENUTUP</h1>
+            <h1 class="page-title center-title">BAB III<br>PENUTUP</h1>
             
             <div class="content-section">
                 <h3>3.1 Kesimpulan</h3>
@@ -307,7 +308,6 @@
                 </ul>
             </div>
             
-            
             <div class="page-numbers">
                 <button class="page-btn" id="prevBtn4">Sebelumnya</button>
                 <span>Halaman 4 dari 4</span>
@@ -324,6 +324,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
